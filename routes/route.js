@@ -3,6 +3,7 @@ var userController = require('../controllers/userController')
 var taskController = require('../controllers/taskController')
 var categoryController = require('../controllers/categoryController')
 
+
 var rotas = express.Router()
 
 rotas.post("/cadastrarUsuario", userController.create);
