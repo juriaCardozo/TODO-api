@@ -11,15 +11,6 @@ var usuario = banco.define('usuario', {
     nome: {
         type: sequelize.STRING,
         allowNull: false,
-    },
-    email: {
-        type: sequelize.STRING,
-        unique: true,
-        allowNull: false,
-    },
-    senha: {
-        type: sequelize.STRING,
-        allowNull: false,
     }
 }, {
     freezeTableName: true,

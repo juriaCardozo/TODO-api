@@ -17,10 +17,6 @@ var tarefa = banco.define('tarefa', {
     descricao: {
         type: sequelize.STRING,
         allowNull: false,
-    },
-    status: {
-        type: sequelize.STRING,
-        allowNull: false,
     }
 }, {
     freezeTableName: true,

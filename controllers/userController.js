@@ -4,9 +4,7 @@ var userController = {}
 
 userController.create = function(req, res){
     usuario.create({
-        nome: req.body.nome,
-        email: req.body.email,
-        senha: req.body.senha
+        nome: req.body.nome
     }).then(() => {
         res.sendStatus(200)
     }).catch((erro) => {
@@ -43,7 +41,7 @@ userController.findAll = function(req, res){
 
 userController.update = function(req, res){
     usuario.update({
-        nome: req.body.nome,
+        nome: req.body.nome
     },{
         where: {
             idUsuario: req.params.id

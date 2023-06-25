@@ -8,7 +8,6 @@ taskController.create = function(req, res){
     tarefa.create({
         titulo: req.body.titulo,
         descricao: req.body.descricao,
-        status: req.body.status,
         idUsuario: req.params.idusuario,
         idCategoria: req.params.idcategoria
     }).then(() => {
@@ -48,8 +47,7 @@ taskController.findAll = function(req, res){
 taskController.update = function(req, res){
     tarefa.update({
         titulo: req.body.titulo,
-        descricao: req.body.descricao,
-        status: req.body.status
+        descricao: req.body.descricao
     },{
         where: {
             idTarefa: req.params.id
