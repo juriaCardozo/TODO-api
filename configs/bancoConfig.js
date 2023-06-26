@@ -1,8 +1,7 @@
 var sequelize = require("sequelize")
 
-var conexao = new sequelize("apiRestNode","postgres","mobile",{
+var conexao = new sequelize("apiRestNode","postgres","postgres",{
     host: "localhost",
-    port: 5433,
     dialect: "postgres"
 })
 
