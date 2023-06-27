@@ -60,7 +60,7 @@ taskController.update = function(req, res){
 }
 
 taskController.destroy = function(req, res){
-    usuario.destroy({
+    tarefa.destroy({
         where: {
             idTarefa: req.params.id
         }
