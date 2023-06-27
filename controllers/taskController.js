@@ -1,6 +1,4 @@
 var tarefa = require("../models/tarefa")
-const usuario = require("../models/usuario")
-const categoria = require("../models/categoria")
 
 var taskController = {}
 
@@ -8,8 +6,8 @@ taskController.create = function(req, res){
     tarefa.create({
         titulo: req.body.titulo,
         descricao: req.body.descricao,
-        idUsuario: req.params.idusuario,
-        idCategoria: req.params.idcategoria
+        idUsuario: req.body.idUsuario,
+        idCategoria: req.body.idCategoria
     }).then(() => {
         res.sendStatus(200)
     }).catch((erro) => {
